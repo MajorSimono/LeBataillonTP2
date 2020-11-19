@@ -1,0 +1,29 @@
+@model IEnumerable<LeBataillon.Database.Models.Player>
+
+
+<h2>Les 3 meilleurs joueurs</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NickName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TeamId)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+
+
+
+            <tr>
+                <td> @Html.DisplayFor(modelItem => item.NickName)</td>
+                <td> @Html.DisplayFor(modelItem => item.TeamId)</td>
+            </tr>
+        }
+
+    </tbody>
+</table>

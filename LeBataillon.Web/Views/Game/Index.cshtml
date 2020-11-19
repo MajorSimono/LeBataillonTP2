@@ -1,7 +1,9 @@
-@model IEnumerable<LeBataillon.Database.Models.Game>
+@model LeBataillon.Database.Models.GamePlayerModel
+
 
 @{
     ViewData["Title"] = "Index";
+
 }
 
 <h1>Index</h1>
@@ -13,41 +15,46 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.GameDateTime)
+                @Html.DisplayNameFor(model => model.GameList[0].GameDateTime)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.TeamDefendantId)
+                @Html.DisplayNameFor(model => model.GameList[0].TeamDefendantId)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.TeamAttackerId)
+                @Html.DisplayNameFor(model => model.GameList[0].TeamAttackerId)
             </th>
-             <th>
-                @Html.DisplayNameFor(model => model.status)
+            <th>
+                @Html.DisplayNameFor(model => model.GameList[0].status)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.GameDateTime)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TeamDefendantId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TeamAttackerId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.status)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model.GameList)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GameDateTime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TeamDefendantId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TeamAttackerId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.status)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
+
+<div>
+    <partial name="_thirdBest" model="Model.PlayerList" />
+</div>

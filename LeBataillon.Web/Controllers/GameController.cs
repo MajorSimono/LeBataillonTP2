@@ -15,16 +15,26 @@ namespace LeBataillon.Web.Controllers
     public class GameController : Controller
     {
         private readonly ILeBataillonRepo _repo;
+        private readonly LeBataillonDbContext _dbcontext;
 
-        public GameController(ILeBataillonRepo repo)
+
+        public GameController(ILeBataillonRepo repo, LeBataillon.Database.Context.LeBataillonDbContext dbContext)
         {
             _repo = repo;
+            _dbcontext = dbContext;
         }
 
         // GET: Game
         public IActionResult Index()
         {
-            return View(_repo.GetAllGames());
+
+
+            GamePlayerModel model = new GamePlayerModel();
+
+            model.GameList = _repo.GetAllGames();
+            model.PlayerList = _dbcontext.Players.OrderByDescending(p => p.Level).Take(3).ToList();
+
+            return View(model);
         }
 
         // GET: Game/Details/5

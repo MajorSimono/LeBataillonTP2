@@ -226,5 +226,7 @@ namespace LeBataillon.Database.Repository
             if (el == null) throw new NotFoundException($"{nameof(Team)} : {id} not found");
 
         }
+
+
     }
 }
