@@ -12,7 +12,7 @@ namespace LeBataillon.Database.Models
 
         }
 
-        public Player(int Id, string NickName, string Email, string PhoneNumber, string FirstName, string LastName, PlayerLevel level)
+        public Player(int Id, string NickName, string Email, string PhoneNumber, string FirstName, string LastName, PlayerLevel level, string Description)
         {
             this.Id = Id;
             this.NickName = NickName;
@@ -21,6 +21,7 @@ namespace LeBataillon.Database.Models
             this.FirstName = FirstName;
             this.LastName = LastName;
             this.Level = Level;
+            this.Description = Description;
 
         }
 
@@ -33,6 +34,7 @@ namespace LeBataillon.Database.Models
             this.FirstName = p.FirstName;
             this.LastName = p.LastName;
             this.Level = p.Level;
+            this.Description = Description;
 
         }
         [Key]
@@ -67,6 +69,10 @@ namespace LeBataillon.Database.Models
         public int TeamId { get; set; }
 
         public virtual Team Team { get; set; }
+
+        [Display(Name = "Description du joueur")]
+        [DataType(DataType.MultilineText)]
+        public string Description { get; set; }
 
     }
 }

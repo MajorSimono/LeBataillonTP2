@@ -19,13 +19,13 @@ namespace LeBataillon.Database.Context
             {
 
                 var teamName = "Équipe de " + SampleData.GenerateName(i);
-                Teams.Add(new Team(i, teamName, null, 10)); //équipe 1, capitaine > player 1, //équpe 2, capitaine > player 2
+                Teams.Add(new Team(i, teamName, null, 10, "Description de l'éqiupe")); //équipe 1, capitaine > player 1, //équpe 2, capitaine > player 2
             }
 
             for (int i = 1; i < 100; i++)
             {
                 var name = SampleData.GenerateName(10 + i);//pour pas avoir le même nom
-                var player = new Player(i, $"{name}Alias", $"{name}@bataillonMail.com", SampleData.GeneratePhoneNumber(i), name, SampleData.GenerateLastName(i), SampleData.GenerateLevel());
+                var player = new Player(i, $"{name}Alias", $"{name}@bataillonMail.com", SampleData.GeneratePhoneNumber(i), name, SampleData.GenerateLastName(i), SampleData.GenerateLevel(), "Description du joueur");
 
                 Players.Add(player);
 

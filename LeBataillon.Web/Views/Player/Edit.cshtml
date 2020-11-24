@@ -49,6 +49,11 @@
                 <span asp-validation-for="TeamId" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <textarea asp-for="Description" class="form-control" ></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <partial name="_Buttons">
             </div>
         </form>
@@ -57,5 +62,19 @@
 
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+
+     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+  <script src="https://cdn.tiny.cloud/1/hv1o5juacdixw1gzpygk47t9qmpfcv591k8whfq2lv9019g5/tinymce/5/tinymce.min.js"></script>"
+
+  <script>
+  tinymce.init({
+    selector: 'textarea',
+    plugins: 'lists',
+    menubar: 'file edit format'
+  });
+
+
+  </script>
 }
+

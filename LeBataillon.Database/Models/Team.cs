@@ -14,12 +14,13 @@ namespace LeBataillon.Database.Models
 
         }
 
-        public Team(int Id, string TeamName, int? CaptainId, int JoueurMaximum)
+        public Team(int Id, string TeamName, int? CaptainId, int JoueurMaximum, string Description)
         {
             this.Id = Id;
             this.TeamName = TeamName;
             this.CaptainId = CaptainId;
             this.JoueurMaximum = JoueurMaximum;
+            this.Description = Description;
 
         }
 
@@ -29,6 +30,7 @@ namespace LeBataillon.Database.Models
             this.TeamName = t.TeamName;
             this.CaptainId = t.CaptainId;
             this.JoueurMaximum = t.JoueurMaximum;
+            this.Description = t.Description;
 
         }
 
@@ -55,6 +57,10 @@ namespace LeBataillon.Database.Models
         [Required(ErrorMessage = "Nombre de joueurs maximum de l'équipe requis")]
         [Range(6, 10, ErrorMessage = "Minimum de joueurs est de 6 et maximum de joueurs est 10")]
         public int JoueurMaximum { get; set; }
+
+        [Display(Name = "Description de l'Équipe")]
+        [DataType(DataType.MultilineText)]
+        public string Description { get; set; }
 
     }
 }

@@ -35,7 +35,7 @@ namespace LeBataillon.Database.Context
             {
 
                 var name = SampleData.GenerateName(i);
-                var player = new Player(i, $"{name}Alias", $"{name}@bataillonMail.com", SampleData.GeneratePhoneNumber(i), name, SampleData.GenerateLastName(i), SampleData.GenerateLevel());
+                var player = new Player(i, $"{name}Alias", $"{name}@bataillonMail.com", SampleData.GeneratePhoneNumber(i), name, SampleData.GenerateLastName(i), SampleData.GenerateLevel(), "Description du joueur");
                 player.TeamId = (i <= 10) ? i : SampleData.GenerateInteger(i, 1, 10);
                 players.Add(player);
             }
@@ -48,7 +48,7 @@ namespace LeBataillon.Database.Context
                 var capitain = players.Where(p => p.TeamId == i).First();
 
                 var teamName = "Équipe de " + SampleData.GenerateName(i);
-                teams.Add(new Team(i, teamName, capitain.Id, 10));
+                teams.Add(new Team(i, teamName, capitain.Id, 10, "Description de l'éqiupe"));
             }
             modelBuilder.Entity<Team>().HasData(teams);
 
