@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LeBataillon.Database.Migrations
 {
     [DbContext(typeof(LeBataillonDbContext))]
-    [Migration("20201006151720_Section3")]
-    partial class Section3
+    [Migration("20201126143545_initialCreate")]
+    partial class initialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -82,6 +82,9 @@ namespace LeBataillon.Database.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(50)")
@@ -117,6 +120,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 1,
+                            Description = "Description du joueur",
                             Email = "Adrian@bataillonMail.com",
                             FirstName = "Adrian",
                             LastName = "Jonkruojis",
@@ -128,6 +132,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 2,
+                            Description = "Description du joueur",
                             Email = "Krissy@bataillonMail.com",
                             FirstName = "Krissy",
                             LastName = "Reidcoln",
@@ -139,6 +144,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 3,
+                            Description = "Description du joueur",
                             Email = "Pat@bataillonMail.com",
                             FirstName = "Pat",
                             LastName = "Steinstrand",
@@ -150,6 +156,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 4,
+                            Description = "Description du joueur",
                             Email = "Palmira@bataillonMail.com",
                             FirstName = "Palmira",
                             LastName = "Nuugaatrapaluk",
@@ -161,6 +168,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 5,
+                            Description = "Description du joueur",
                             Email = "Ralph@bataillonMail.com",
                             FirstName = "Ralph",
                             LastName = "Vadtälje",
@@ -172,6 +180,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 6,
+                            Description = "Description du joueur",
                             Email = "Arielle@bataillonMail.com",
                             FirstName = "Arielle",
                             LastName = "Eqalunavik",
@@ -183,6 +192,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 7,
+                            Description = "Description du joueur",
                             Email = "Troy@bataillonMail.com",
                             FirstName = "Troy",
                             LastName = "Lystrup",
@@ -194,6 +204,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 8,
+                            Description = "Description du joueur",
                             Email = "Marcell@bataillonMail.com",
                             FirstName = "Marcell",
                             LastName = "Ixtatla",
@@ -205,6 +216,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 9,
+                            Description = "Description du joueur",
                             Email = "Vi@bataillonMail.com",
                             FirstName = "Vi",
                             LastName = "Haapsa",
@@ -216,6 +228,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 10,
+                            Description = "Description du joueur",
                             Email = "Sherise@bataillonMail.com",
                             FirstName = "Sherise",
                             LastName = "Guasabaro",
@@ -227,6 +240,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 11,
+                            Description = "Description du joueur",
                             Email = "Angelina@bataillonMail.com",
                             FirstName = "Angelina",
                             LastName = "Kalatee",
@@ -238,6 +252,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 12,
+                            Description = "Description du joueur",
                             Email = "Liliana@bataillonMail.com",
                             FirstName = "Liliana",
                             LastName = "Boswood",
@@ -249,6 +264,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 13,
+                            Description = "Description du joueur",
                             Email = "Sheryl@bataillonMail.com",
                             FirstName = "Sheryl",
                             LastName = "Hókrókur",
@@ -260,6 +276,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 14,
+                            Description = "Description du joueur",
                             Email = "Mariella@bataillonMail.com",
                             FirstName = "Mariella",
                             LastName = "Dragstrup",
@@ -271,6 +288,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 15,
+                            Description = "Description du joueur",
                             Email = "Berniece@bataillonMail.com",
                             FirstName = "Berniece",
                             LastName = "Ketne",
@@ -282,6 +300,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 16,
+                            Description = "Description du joueur",
                             Email = "Conrad@bataillonMail.com",
                             FirstName = "Conrad",
                             LastName = "Kalvee",
@@ -293,6 +312,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 17,
+                            Description = "Description du joueur",
                             Email = "Sherlene@bataillonMail.com",
                             FirstName = "Sherlene",
                             LastName = "Kedainkai",
@@ -304,6 +324,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 18,
+                            Description = "Description du joueur",
                             Email = "Nicholas@bataillonMail.com",
                             FirstName = "Nicholas",
                             LastName = "Rovanola",
@@ -315,6 +336,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 19,
+                            Description = "Description du joueur",
                             Email = "Tyson@bataillonMail.com",
                             FirstName = "Tyson",
                             LastName = "Brønnøyden",
@@ -326,6 +348,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 20,
+                            Description = "Description du joueur",
                             Email = "Derick@bataillonMail.com",
                             FirstName = "Derick",
                             LastName = "Ísafholt",
@@ -337,6 +360,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 21,
+                            Description = "Description du joueur",
                             Email = "Leida@bataillonMail.com",
                             FirstName = "Leida",
                             LastName = "Hammervåg",
@@ -348,6 +372,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 22,
+                            Description = "Description du joueur",
                             Email = "Debi@bataillonMail.com",
                             FirstName = "Debi",
                             LastName = "Kulli",
@@ -359,6 +384,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 23,
+                            Description = "Description du joueur",
                             Email = "Ernestine@bataillonMail.com",
                             FirstName = "Ernestine",
                             LastName = "Enbo",
@@ -370,6 +396,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 24,
+                            Description = "Description du joueur",
                             Email = "Adrian@bataillonMail.com",
                             FirstName = "Adrian",
                             LastName = "Lazmerge",
@@ -381,6 +408,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 25,
+                            Description = "Description du joueur",
                             Email = "Eugenie@bataillonMail.com",
                             FirstName = "Eugenie",
                             LastName = "Reidcoln",
@@ -392,6 +420,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 26,
+                            Description = "Description du joueur",
                             Email = "Cathryn@bataillonMail.com",
                             FirstName = "Cathryn",
                             LastName = "Breksos",
@@ -403,6 +432,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 27,
+                            Description = "Description du joueur",
                             Email = "Jamal@bataillonMail.com",
                             FirstName = "Jamal",
                             LastName = "Nuugaatrapaluk",
@@ -414,6 +444,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 28,
+                            Description = "Description du joueur",
                             Email = "Emely@bataillonMail.com",
                             FirstName = "Emely",
                             LastName = "Norrviken",
@@ -425,6 +456,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 29,
+                            Description = "Description du joueur",
                             Email = "Arielle@bataillonMail.com",
                             FirstName = "Arielle",
                             LastName = "Eqalunavik",
@@ -436,6 +468,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 30,
+                            Description = "Description du joueur",
                             Email = "Steven@bataillonMail.com",
                             FirstName = "Steven",
                             LastName = "Ulhus",
@@ -447,6 +480,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 31,
+                            Description = "Description du joueur",
                             Email = "Roma@bataillonMail.com",
                             FirstName = "Roma",
                             LastName = "Apatcruz",
@@ -458,6 +492,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 32,
+                            Description = "Description du joueur",
                             Email = "Simonne@bataillonMail.com",
                             FirstName = "Simonne",
                             LastName = "Mõisali",
@@ -469,6 +504,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 33,
+                            Description = "Description du joueur",
                             Email = "Jeanetta@bataillonMail.com",
                             FirstName = "Jeanetta",
                             LastName = "Mensmere",
@@ -480,6 +516,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 34,
+                            Description = "Description du joueur",
                             Email = "Angelina@bataillonMail.com",
                             FirstName = "Angelina",
                             LastName = "Nittinen",
@@ -491,6 +528,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 35,
+                            Description = "Description du joueur",
                             Email = "Magen@bataillonMail.com",
                             FirstName = "Magen",
                             LastName = "Albro",
@@ -502,6 +540,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 36,
+                            Description = "Description du joueur",
                             Email = "Jane@bataillonMail.com",
                             FirstName = "Jane",
                             LastName = "Hókrókur",
@@ -513,6 +552,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 37,
+                            Description = "Description du joueur",
                             Email = "Tonita@bataillonMail.com",
                             FirstName = "Tonita",
                             LastName = "Loktu",
@@ -524,6 +564,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 38,
+                            Description = "Description du joueur",
                             Email = "Dina@bataillonMail.com",
                             FirstName = "Dina",
                             LastName = "Ketne",
@@ -535,6 +576,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 39,
+                            Description = "Description du joueur",
                             Email = "Conrad@bataillonMail.com",
                             FirstName = "Conrad",
                             LastName = "Siukoski",
@@ -546,6 +588,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 40,
+                            Description = "Description du joueur",
                             Email = "Adell@bataillonMail.com",
                             FirstName = "Adell",
                             LastName = "Kedainkai",
@@ -557,6 +600,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 41,
+                            Description = "Description du joueur",
                             Email = "Pierre@bataillonMail.com",
                             FirstName = "Pierre",
                             LastName = "Akssandur",
@@ -568,6 +612,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 42,
+                            Description = "Description du joueur",
                             Email = "Bianca@bataillonMail.com",
                             FirstName = "Bianca",
                             LastName = "Brønnøyden",
@@ -579,6 +624,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 43,
+                            Description = "Description du joueur",
                             Email = "Barbie@bataillonMail.com",
                             FirstName = "Barbie",
                             LastName = "Jaunli",
@@ -590,6 +636,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 44,
+                            Description = "Description du joueur",
                             Email = "Leida@bataillonMail.com",
                             FirstName = "Leida",
                             LastName = "Kungstuna",
@@ -601,6 +648,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 45,
+                            Description = "Description du joueur",
                             Email = "Rosetta@bataillonMail.com",
                             FirstName = "Rosetta",
                             LastName = "Jonkruojis",
@@ -612,6 +660,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 46,
+                            Description = "Description du joueur",
                             Email = "Krissy@bataillonMail.com",
                             FirstName = "Krissy",
                             LastName = "Clarehurst",
@@ -623,6 +672,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 47,
+                            Description = "Description du joueur",
                             Email = "Marlon@bataillonMail.com",
                             FirstName = "Marlon",
                             LastName = "Steinstrand",
@@ -634,6 +684,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 48,
+                            Description = "Description du joueur",
                             Email = "Palmira@bataillonMail.com",
                             FirstName = "Palmira",
                             LastName = "Flatwood",
@@ -645,6 +696,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 49,
+                            Description = "Description du joueur",
                             Email = "Cathryn@bataillonMail.com",
                             FirstName = "Cathryn",
                             LastName = "Breksos",
@@ -656,6 +708,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 50,
+                            Description = "Description du joueur",
                             Email = "Eugenio@bataillonMail.com",
                             FirstName = "Eugenio",
                             LastName = "Uummanqaq",
@@ -667,6 +720,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 51,
+                            Description = "Description du joueur",
                             Email = "Troy@bataillonMail.com",
                             FirstName = "Troy",
                             LastName = "Norrviken",
@@ -678,6 +732,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 52,
+                            Description = "Description du joueur",
                             Email = "Tad@bataillonMail.com",
                             FirstName = "Tad",
                             LastName = "Ixtatla",
@@ -689,6 +744,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 53,
+                            Description = "Description du joueur",
                             Email = "Vi@bataillonMail.com",
                             FirstName = "Vi",
                             LastName = "Ulhus",
@@ -700,6 +756,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 54,
+                            Description = "Description du joueur",
                             Email = "Roma@bataillonMail.com",
                             FirstName = "Roma",
                             LastName = "Guasabaro",
@@ -711,6 +768,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 55,
+                            Description = "Description du joueur",
                             Email = "Alejandro@bataillonMail.com",
                             FirstName = "Alejandro",
                             LastName = "Mõisali",
@@ -722,6 +780,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 56,
+                            Description = "Description du joueur",
                             Email = "Liliana@bataillonMail.com",
                             FirstName = "Liliana",
                             LastName = "Boswood",
@@ -733,6 +792,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 57,
+                            Description = "Description du joueur",
                             Email = "Marcie@bataillonMail.com",
                             FirstName = "Marcie",
                             LastName = "Nittinen",
@@ -744,6 +804,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 58,
+                            Description = "Description du joueur",
                             Email = "Mariella@bataillonMail.com",
                             FirstName = "Mariella",
                             LastName = "Dragstrup",
@@ -755,6 +816,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 59,
+                            Description = "Description du joueur",
                             Email = "Jane@bataillonMail.com",
                             FirstName = "Jane",
                             LastName = "Ólafsholt",
@@ -766,6 +828,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 60,
+                            Description = "Description du joueur",
                             Email = "Marcella@bataillonMail.com",
                             FirstName = "Marcella",
                             LastName = "Kalvee",
@@ -777,6 +840,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 61,
+                            Description = "Description du joueur",
                             Email = "Sherlene@bataillonMail.com",
                             FirstName = "Sherlene",
                             LastName = "Salkile",
@@ -788,6 +852,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 62,
+                            Description = "Description du joueur",
                             Email = "Antonetta@bataillonMail.com",
                             FirstName = "Antonetta",
                             LastName = "Rovanola",
@@ -799,6 +864,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 63,
+                            Description = "Description du joueur",
                             Email = "Tyson@bataillonMail.com",
                             FirstName = "Tyson",
                             LastName = "Balniai",
@@ -810,6 +876,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 64,
+                            Description = "Description du joueur",
                             Email = "Pierre@bataillonMail.com",
                             FirstName = "Pierre",
                             LastName = "Akssandur",
@@ -821,6 +888,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 65,
+                            Description = "Description du joueur",
                             Email = "Sheridan@bataillonMail.com",
                             FirstName = "Sheridan",
                             LastName = "Hammervåg",
@@ -832,6 +900,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 66,
+                            Description = "Description du joueur",
                             Email = "Debi@bataillonMail.com",
                             FirstName = "Debi",
                             LastName = "Jaunli",
@@ -843,6 +912,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 67,
+                            Description = "Description du joueur",
                             Email = "Johana@bataillonMail.com",
                             FirstName = "Johana",
                             LastName = "Enbo",
@@ -854,6 +924,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 68,
+                            Description = "Description du joueur",
                             Email = "Adrian@bataillonMail.com",
                             FirstName = "Adrian",
                             LastName = "Jonkruojis",
@@ -865,6 +936,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 69,
+                            Description = "Description du joueur",
                             Email = "Krissy@bataillonMail.com",
                             FirstName = "Krissy",
                             LastName = "Reidcoln",
@@ -876,6 +948,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 70,
+                            Description = "Description du joueur",
                             Email = "Pat@bataillonMail.com",
                             FirstName = "Pat",
                             LastName = "Steinstrand",
@@ -887,6 +960,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 71,
+                            Description = "Description du joueur",
                             Email = "Jamal@bataillonMail.com",
                             FirstName = "Jamal",
                             LastName = "Nuugaatrapaluk",
@@ -898,6 +972,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 72,
+                            Description = "Description du joueur",
                             Email = "Ralph@bataillonMail.com",
                             FirstName = "Ralph",
                             LastName = "Vadtälje",
@@ -909,6 +984,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 73,
+                            Description = "Description du joueur",
                             Email = "Arielle@bataillonMail.com",
                             FirstName = "Arielle",
                             LastName = "Eqalunavik",
@@ -920,6 +996,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 74,
+                            Description = "Description du joueur",
                             Email = "Troy@bataillonMail.com",
                             FirstName = "Troy",
                             LastName = "Lystrup",
@@ -931,6 +1008,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 75,
+                            Description = "Description du joueur",
                             Email = "Marcell@bataillonMail.com",
                             FirstName = "Marcell",
                             LastName = "Apatcruz",
@@ -942,6 +1020,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 76,
+                            Description = "Description du joueur",
                             Email = "Simonne@bataillonMail.com",
                             FirstName = "Simonne",
                             LastName = "Haapsa",
@@ -953,6 +1032,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 77,
+                            Description = "Description du joueur",
                             Email = "Sherise@bataillonMail.com",
                             FirstName = "Sherise",
                             LastName = "Guasabaro",
@@ -964,6 +1044,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 78,
+                            Description = "Description du joueur",
                             Email = "Angelina@bataillonMail.com",
                             FirstName = "Angelina",
                             LastName = "Kalatee",
@@ -975,6 +1056,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 79,
+                            Description = "Description du joueur",
                             Email = "Liliana@bataillonMail.com",
                             FirstName = "Liliana",
                             LastName = "Boswood",
@@ -986,6 +1068,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 80,
+                            Description = "Description du joueur",
                             Email = "Sheryl@bataillonMail.com",
                             FirstName = "Sheryl",
                             LastName = "Hókrókur",
@@ -997,6 +1080,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 81,
+                            Description = "Description du joueur",
                             Email = "Tonita@bataillonMail.com",
                             FirstName = "Tonita",
                             LastName = "Dragstrup",
@@ -1008,6 +1092,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 82,
+                            Description = "Description du joueur",
                             Email = "Berniece@bataillonMail.com",
                             FirstName = "Berniece",
                             LastName = "Ketne",
@@ -1019,6 +1104,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 83,
+                            Description = "Description du joueur",
                             Email = "Conrad@bataillonMail.com",
                             FirstName = "Conrad",
                             LastName = "Kalvee",
@@ -1030,6 +1116,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 84,
+                            Description = "Description du joueur",
                             Email = "Sherlene@bataillonMail.com",
                             FirstName = "Sherlene",
                             LastName = "Kedainkai",
@@ -1041,6 +1128,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 85,
+                            Description = "Description du joueur",
                             Email = "Nicholas@bataillonMail.com",
                             FirstName = "Nicholas",
                             LastName = "Rovanola",
@@ -1052,6 +1140,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 86,
+                            Description = "Description du joueur",
                             Email = "Bianca@bataillonMail.com",
                             FirstName = "Bianca",
                             LastName = "Brønnøyden",
@@ -1063,6 +1152,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 87,
+                            Description = "Description du joueur",
                             Email = "Derick@bataillonMail.com",
                             FirstName = "Derick",
                             LastName = "Ísafholt",
@@ -1074,6 +1164,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 88,
+                            Description = "Description du joueur",
                             Email = "Leida@bataillonMail.com",
                             FirstName = "Leida",
                             LastName = "Kungstuna",
@@ -1085,6 +1176,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 89,
+                            Description = "Description du joueur",
                             Email = "Debi@bataillonMail.com",
                             FirstName = "Debi",
                             LastName = "Kulli",
@@ -1096,6 +1188,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 90,
+                            Description = "Description du joueur",
                             Email = "Ernestine@bataillonMail.com",
                             FirstName = "Ernestine",
                             LastName = "Clarehurst",
@@ -1107,6 +1200,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 91,
+                            Description = "Description du joueur",
                             Email = "Marlon@bataillonMail.com",
                             FirstName = "Marlon",
                             LastName = "Lazmerge",
@@ -1118,6 +1212,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 92,
+                            Description = "Description du joueur",
                             Email = "Eugenie@bataillonMail.com",
                             FirstName = "Eugenie",
                             LastName = "Reidcoln",
@@ -1129,6 +1224,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 93,
+                            Description = "Description du joueur",
                             Email = "Cathryn@bataillonMail.com",
                             FirstName = "Cathryn",
                             LastName = "Breksos",
@@ -1140,6 +1236,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 94,
+                            Description = "Description du joueur",
                             Email = "Jamal@bataillonMail.com",
                             FirstName = "Jamal",
                             LastName = "Nuugaatrapaluk",
@@ -1151,6 +1248,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 95,
+                            Description = "Description du joueur",
                             Email = "Emely@bataillonMail.com",
                             FirstName = "Emely",
                             LastName = "Norrviken",
@@ -1162,6 +1260,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 96,
+                            Description = "Description du joueur",
                             Email = "Tad@bataillonMail.com",
                             FirstName = "Tad",
                             LastName = "Eqalunavik",
@@ -1173,6 +1272,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 97,
+                            Description = "Description du joueur",
                             Email = "Steven@bataillonMail.com",
                             FirstName = "Steven",
                             LastName = "Ulhus",
@@ -1184,6 +1284,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 98,
+                            Description = "Description du joueur",
                             Email = "Roma@bataillonMail.com",
                             FirstName = "Roma",
                             LastName = "Apatcruz",
@@ -1195,6 +1296,7 @@ namespace LeBataillon.Database.Migrations
                         new
                         {
                             Id = 99,
+                            Description = "Description du joueur",
                             Email = "Simonne@bataillonMail.com",
                             FirstName = "Simonne",
                             LastName = "Mõisali",
@@ -1216,6 +1318,9 @@ namespace LeBataillon.Database.Migrations
                         .IsRequired()
                         .HasColumnType("int");
 
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("JoueurMaximum")
                         .HasColumnType("int");
 
@@ -1236,6 +1341,7 @@ namespace LeBataillon.Database.Migrations
                         {
                             Id = 1,
                             CaptainId = 1,
+                            Description = "Description de l'éqiupe",
                             JoueurMaximum = 10,
                             TeamName = "Équipe de Adrian"
                         },
@@ -1243,6 +1349,7 @@ namespace LeBataillon.Database.Migrations
                         {
                             Id = 2,
                             CaptainId = 2,
+                            Description = "Description de l'éqiupe",
                             JoueurMaximum = 10,
                             TeamName = "Équipe de Krissy"
                         },
@@ -1250,6 +1357,7 @@ namespace LeBataillon.Database.Migrations
                         {
                             Id = 3,
                             CaptainId = 3,
+                            Description = "Description de l'éqiupe",
                             JoueurMaximum = 10,
                             TeamName = "Équipe de Pat"
                         },
@@ -1257,6 +1365,7 @@ namespace LeBataillon.Database.Migrations
                         {
                             Id = 4,
                             CaptainId = 4,
+                            Description = "Description de l'éqiupe",
                             JoueurMaximum = 10,
                             TeamName = "Équipe de Palmira"
                         },
@@ -1264,6 +1373,7 @@ namespace LeBataillon.Database.Migrations
                         {
                             Id = 5,
                             CaptainId = 5,
+                            Description = "Description de l'éqiupe",
                             JoueurMaximum = 10,
                             TeamName = "Équipe de Ralph"
                         },
@@ -1271,6 +1381,7 @@ namespace LeBataillon.Database.Migrations
                         {
                             Id = 6,
                             CaptainId = 6,
+                            Description = "Description de l'éqiupe",
                             JoueurMaximum = 10,
                             TeamName = "Équipe de Arielle"
                         },
@@ -1278,6 +1389,7 @@ namespace LeBataillon.Database.Migrations
                         {
                             Id = 7,
                             CaptainId = 7,
+                            Description = "Description de l'éqiupe",
                             JoueurMaximum = 10,
                             TeamName = "Équipe de Troy"
                         },
@@ -1285,6 +1397,7 @@ namespace LeBataillon.Database.Migrations
                         {
                             Id = 8,
                             CaptainId = 8,
+                            Description = "Description de l'éqiupe",
                             JoueurMaximum = 10,
                             TeamName = "Équipe de Marcell"
                         },
@@ -1292,6 +1405,7 @@ namespace LeBataillon.Database.Migrations
                         {
                             Id = 9,
                             CaptainId = 9,
+                            Description = "Description de l'éqiupe",
                             JoueurMaximum = 10,
                             TeamName = "Équipe de Vi"
                         });

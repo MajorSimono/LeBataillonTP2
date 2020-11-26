@@ -10,6 +10,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using LeBataillon.Database.Repository;
+using System.Globalization;
+using Microsoft.AspNetCore.Mvc.Razor;
+using Microsoft.AspNetCore.Localization;
+using Microsoft.Extensions.Options;
 
 namespace LeBataillon.Web
 {
@@ -25,9 +29,18 @@ namespace LeBataillon.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews().AddNewtonsoftJson(options =>
-    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
-); ;
+            services.AddLocalization(options => options.ResourcesPath = "Resources");
+
+            services.AddControllersWithViews().AddRazorRuntimeCompilation() 
+            .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
+            .AddDataAnnotationsLocalization();
+
+            services.Configure<RequestLocalizationOptions>(options =>
+                    {
+                        options.DefaultRequestCulture = new RequestCulture(culture: "en-US", uiCulture: "en-US");
+                        options.SupportedCultures = supportedCultures;
+                        options.SupportedUICultures = supportedCultures;   
+                    }); 
 
             services.AddDbContext<LeBataillonDbContext>(options => { options.UseSqlServer(Configuration.GetConnectionString("LeBataillonDbContext")); });
 
@@ -35,10 +48,18 @@ namespace LeBataillon.Web
 
 
         }
+        private CultureInfo[] supportedCultures = new[]
+            {
+                new CultureInfo("en-US"),
+                new CultureInfo("fr-CA")
+            };
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            var locOptions= app.ApplicationServices.GetService<IOptions<RequestLocalizationOptions>>();
+            app.UseRequestLocalization(locOptions.Value);
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
