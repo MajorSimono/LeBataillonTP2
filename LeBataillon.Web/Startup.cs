@@ -19,6 +19,13 @@ namespace LeBataillon.Web
 {
     public class Startup
     {
+
+        private CultureInfo[] supportedCultures = new[]
+      {
+new CultureInfo("en-US"),
+new CultureInfo("fr-CA")
+};
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -29,18 +36,20 @@ namespace LeBataillon.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddLocalization(options => options.ResourcesPath = "Resources");
+            services.AddLocalization(options => options.ResourcesPath = "Ressources");
 
-            services.AddControllersWithViews().AddRazorRuntimeCompilation() 
-            .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
-            .AddDataAnnotationsLocalization();
+            services.AddControllersWithViews().AddNewtonsoftJson(options =>
+    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+).AddRazorRuntimeCompilation()
+.AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
+.AddDataAnnotationsLocalization();
 
-            services.Configure<RequestLocalizationOptions>(options =>
-                    {
-                        options.DefaultRequestCulture = new RequestCulture(culture: "en-US", uiCulture: "en-US");
-                        options.SupportedCultures = supportedCultures;
-                        options.SupportedUICultures = supportedCultures;   
-                    }); 
+            services.Configure<RequestLocalizationOptions>(options =>
+{
+    options.DefaultRequestCulture = new RequestCulture(culture: "en-US", uiCulture: "en-US");
+    options.SupportedCultures = supportedCultures;
+    options.SupportedUICultures = supportedCultures;
+});
 
             services.AddDbContext<LeBataillonDbContext>(options => { options.UseSqlServer(Configuration.GetConnectionString("LeBataillonDbContext")); });
 
@@ -48,17 +57,13 @@ namespace LeBataillon.Web
 
 
         }
-        private CultureInfo[] supportedCultures = new[]
-            {
-                new CultureInfo("en-US"),
-                new CultureInfo("fr-CA")
-            };
+
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            var locOptions= app.ApplicationServices.GetService<IOptions<RequestLocalizationOptions>>();
-            app.UseRequestLocalization(locOptions.Value);
+            var locOptions = app.ApplicationServices.GetService<IOptions<RequestLocalizationOptions>>();
+            app.UseRequestLocalization(locOptions.Value);
 
             if (env.IsDevelopment())
             {

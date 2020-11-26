@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using LeBataillon.Web.Models;
 using LeBataillon.Database.Context;
+using Microsoft.Extensions.Localization;
+
 namespace LeBataillon.Web.Controllers
 {
     public class HomeController : Controller
@@ -14,14 +16,19 @@ namespace LeBataillon.Web.Controllers
         private readonly ILogger<HomeController> _logger;
         private readonly LeBataillonDbContext _dbcontext;
 
-        public HomeController(ILogger<HomeController> logger, LeBataillon.Database.Context.LeBataillonDbContext dbContext)
+        private readonly IStringLocalizer<HomeController> _localizer;
+
+        public HomeController(ILogger<HomeController> logger, LeBataillon.Database.Context.LeBataillonDbContext dbContext, IStringLocalizer<HomeController> localizer)
         {
             _logger = logger;
             _dbcontext = dbContext;
+            _localizer = localizer;
         }
 
         public IActionResult Index()
         {
+
+            ViewData["Title"] = this._localizer["HomeIndexTitle"];
             return View(_dbcontext.Players.OrderByDescending(p => p.Level).Take(3));
 
         }

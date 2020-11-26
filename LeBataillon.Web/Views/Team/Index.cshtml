@@ -9,7 +9,7 @@
 <p>
     <a class="btn btn-primary" asp-action="Create"><i class="fas fa-plus-circle"></i>Create New </a>
 </p>
-<table class="table">
+<table id="tblData" class="table">
     <thead>
         <tr>
             <th>
@@ -24,7 +24,7 @@
             <th></th>
         </tr>
     </thead>
-    <tbody>
+  <!--  <tbody>
         @foreach (var item in Model)
         {
             <tr>
@@ -47,15 +47,16 @@
                 </td>
             </tr>
         }
-    </tbody>
+    </tbody> -->
 </table>
 
 @section Scripts{
   <script src="~/js/Team.js"></script>
 
     <script>
-      $('document').ready( function() {
-          Command: toastr["success"]("Edit Réussi")
+      $    $(document).ready(function () { 
+       if('@TempData["message"]' == "added"){
+          Command: toastr["success"]("Create Reussi")
 
 toastr.options = {
   "closeButton": false,
@@ -73,7 +74,30 @@ toastr.options = {
   "hideEasing": "linear",
   "showMethod": "fadeIn",
   "hideMethod": "fadeOut"
-}
+       }
+       else if('@TempData["message"]' == "edit")
+       { 
+       Command: toastr["success"]("edit Reussi")
+
+toastr.options = {
+  "closeButton": false,
+  "debug": false,
+  "newestOnTop": false,
+  "progressBar": false,
+  "positionClass": "toast-top-right",
+  "preventDuplicates": false,
+  "onclick": null,
+  "showDuration": "300",
+  "hideDuration": "1000",
+  "timeOut": "5000",
+  "extendedTimeOut": "1000",
+  "showEasing": "swing",
+  "hideEasing": "linear",
+  "showMethod": "fadeIn",
+  "hideMethod": "fadeOut"       }
+       else{}
+    });
+
       })
   </script>
   }
