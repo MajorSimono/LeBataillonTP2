@@ -10,9 +10,9 @@ function loadDataTable() {
             "url": "/Team/GetAll"
         },
         "columns": [
-            { "data": "TeamName", "width": "20%" },
-            { "data": "CapitaineId", "width": "10%" },
-            { "data": "JoueurMaximum", "width": "10%" },
+            { "data": "teamName", "width": "20%" },
+            { "data": "captainId", "width": "10%" },
+            { "data": "joueurMaximum", "width": "10%" },
 
             {
                 "data": "id",
@@ -20,13 +20,13 @@ function loadDataTable() {
                     return `
                     <div class="text-center">
                         <a href="/Team/Edit/${data}" class="btn btn-success text-white"style="cursor:pointer">
-                        <i class="fas fa-edit"></i>
+                        <i class="fas fa-edit">Edit</i>
                         </a>
           <a href="/Team/Details/${data}" class="btn btn-info text-white"style="cursor:pointer">
-          <i class="fas fa-info-circle"></i>
+          <i class="fas fa-info-circle">Details</i>
         </a>
-          <a onclick=Delete("/Team/Delete/${data}") class="btn btn-danger text-white" style="cursor:pointer">
-            <i class="fas fa-trash-alt"></i>
+          <a href="/Team/Delete/${data}" class="btn btn-danger text-white" style="cursor:pointer">
+            <i class="fas fa-trash-alt">Delete</i>
           </a>
         </div>
            `;

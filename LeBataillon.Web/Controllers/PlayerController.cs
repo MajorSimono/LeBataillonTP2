@@ -63,6 +63,7 @@ namespace LeBataillon.Web.Controllers
             {
                 try
                 {
+                    TempData["message"] = "added";
                     _repo.Add(player);
                     return RedirectToAction(nameof(Index));
                 }
@@ -105,6 +106,7 @@ namespace LeBataillon.Web.Controllers
             {
                 try
                 {
+                    TempData["message"] = "edit";
                     _repo.Edit(player);
                     return RedirectToAction(nameof(Index));
                 }
@@ -157,6 +159,12 @@ namespace LeBataillon.Web.Controllers
 
 
 
+        }
+
+        public IActionResult GetAll()
+        {
+
+            return Json(new { data = _repo.GetAllPlayers() });
         }
     }
 }

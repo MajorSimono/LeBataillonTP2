@@ -58,6 +58,7 @@ namespace LeBataillon.Web.Controllers
             {
                 try
                 {
+                    TempData["message"] = "added";
                     _repo.Add(team);
                     return RedirectToAction(nameof(Index));
                 }
@@ -97,6 +98,7 @@ namespace LeBataillon.Web.Controllers
             {
                 try
                 {
+                    TempData["message"] = "edit";
                     _repo.Edit(team);
                     return RedirectToAction(nameof(Index));
                 }
@@ -149,6 +151,9 @@ namespace LeBataillon.Web.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-
+        public IActionResult GetAll()
+        {
+            return Json(new { data = _repo.GetAllTeams() });
+        }
     }
 }
