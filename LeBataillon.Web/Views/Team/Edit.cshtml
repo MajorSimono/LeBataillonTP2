@@ -1,12 +1,12 @@
 @model LeBataillon.Database.Models.Team
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = @SharedLocals["Save"];
 }
 
-<h1>Edit</h1>
+<h1>@SharedLocals["Edit"]</h1>
 
-<h4>Team</h4>
+<h4>@SharedLocals["Team"]</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">

@@ -34,7 +34,7 @@ namespace LeBataillon.Database.Models
         [Key]
         public int Id { get; set; }
         [Display(Name = "Date de la partie")]
-        [Required(ErrorMessage = "Date de la partie requis")]
+        [Required(ErrorMessage = "Ce champ est requis")]
         [DataType(DataType.Date)]
         public DateTime GameDateTime { get; set; }
         [Display(Name = "Équipe défendante de la partie")]
@@ -48,7 +48,7 @@ namespace LeBataillon.Database.Models
         public virtual Team TeamAttacker { get; set; }
 
         [Display(Name = "Status de la partie")]
-        [Required(ErrorMessage = "Status de la partie requis")]
+        [Required(ErrorMessage = "Ce champ est requis")]
         public GameStatus status { get; set; }
     }
 }

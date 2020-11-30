@@ -21,10 +21,10 @@ namespace LeBataillon.Web
     {
 
         private CultureInfo[] supportedCultures = new[]
-      {
-new CultureInfo("en-US"),
-new CultureInfo("fr-CA")
-};
+            {
+            new CultureInfo("en-US"),
+            new CultureInfo("fr-CA")
+            };
 
         public Startup(IConfiguration configuration)
         {

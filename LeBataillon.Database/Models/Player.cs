@@ -40,32 +40,32 @@ namespace LeBataillon.Database.Models
         [Key]
         public int Id { get; set; }
 
-        [Display(Name = "NickName du joueur ")]
+        [Display(Name = "Surnom du joueur")]
         public string NickName { get; set; }
-        [Display(Name = "Email du joueur ")]
+        [Display(Name = "Email du joueur")]
         [Required(ErrorMessage = "Email requis")]
         [MaxLength(50, ErrorMessage = "Maximum de 50 caractères pour le champ {0}.")]
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 
-        [Display(Name = "Téléphone du joueur ")]
+        [Display(Name = "Téléphone du joueur")]
         [Phone(ErrorMessage = "Il faut que le téléphone soit de la forme ###-###-####")]
         [DataType(DataType.PhoneNumber)]
         public string PhoneNumber { get; set; }
-        [Display(Name = "Prenom du joueur ")]
-        [Required(ErrorMessage = "Prenom requis")]
+        [Display(Name = "Prénom du joueur")]
+        [Required(ErrorMessage = "Prénom requis")]
         [MaxLength(50, ErrorMessage = "Maximum de 50 caractères pour le champ {0}.")]
 
         public string FirstName { get; set; }
 
-        [Display(Name = "Nom du joueur ")]
+        [Display(Name = "Nom du joueur")]
         [Required(ErrorMessage = "Nom requis")]
         [MaxLength(50, ErrorMessage = "Maximum de 50 caractères pour le champ {0}.")]
         public string LastName { get; set; }
-        [Display(Name = "level du joueur ")]
+        [Display(Name = "Niveau du joueur")]
         public PlayerLevel Level { get; set; }
 
-        [Display(Name = "Team du joueur ")]
+        [Display(Name = "L'équipe du joueur")]
         public int TeamId { get; set; }
 
         public virtual Team Team { get; set; }

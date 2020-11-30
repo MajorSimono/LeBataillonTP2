@@ -117,12 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Welcome" xml:space="preserve">
-    <value>Welcome on the Battailon Website</value>
+  <data name="Date de la partie" xml:space="preserve">
+    <value>Date of the game</value>
     <comment/>
   </data>
-  <data name="WelcomeMessage" xml:space="preserve">
-    <value>The Bataillon is fun</value>
+  <data name="Ce champ est requis" xml:space="preserve">
+    <value>This field is required</value>
+    <comment/>
+  </data>
+  <data name="Équipe défendante de la partie" xml:space="preserve">
+    <value>Defendant team of the game</value>
+    <comment/>
+  </data>
+  <data name="Équipe attaquante de la partie" xml:space="preserve">
+    <value>Attacking team of the game</value>
     <comment/>
   </data>
 </root>

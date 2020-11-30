@@ -117,12 +117,40 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Welcome" xml:space="preserve">
-    <value>Welcome on the Battailon Website</value>
+  <data name="Nom de l'équipe" xml:space="preserve">
+    <value>Name of the team</value>
     <comment/>
   </data>
-  <data name="WelcomeMessage" xml:space="preserve">
-    <value>The Bataillon is fun</value>
+  <data name="Nom de l'équipe requis" xml:space="preserve">
+    <value>Name of the team required</value>
+    <comment/>
+  </data>
+  <data name="Maximum de 25 caractères pour le champ {0}." xml:space="preserve">
+    <value>Maximum of 25 characters for the field {0}.</value>
+    <comment/>
+  </data>
+  <data name="Capitain de l'équipe" xml:space="preserve">
+    <value>Captain of the team</value>
+    <comment/>
+  </data>
+  <data name="Capitain de l'équipe requis" xml:space="preserve">
+    <value>Captain of the team required</value>
+    <comment/>
+  </data>
+  <data name="Nombre de Joueurs Maximum" xml:space="preserve">
+    <value>Maximum number of players</value>
+    <comment/>
+  </data>
+  <data name="Nombre de joueurs maximum de l'équipe requis" xml:space="preserve">
+    <value>Maximum number of players is required</value>
+    <comment/>
+  </data>
+  <data name="Minimum de joueurs est de 6 et maximum de joueurs est 10" xml:space="preserve">
+    <value>There is a minimum of 6 players and a maximum of 10 players per teams.</value>
+    <comment/>
+  </data>
+  <data name="Description de l'Équipe" xml:space="preserve">
+    <value>Team description</value>
     <comment/>
   </data>
 </root>

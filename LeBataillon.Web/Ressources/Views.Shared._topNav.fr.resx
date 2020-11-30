@@ -117,12 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Welcome" xml:space="preserve">
-    <value>Welcome on the Battailon Website</value>
+  <data name="Home" xml:space="preserve">
+    <value>Page d'accueil</value>
     <comment/>
   </data>
-  <data name="WelcomeMessage" xml:space="preserve">
-    <value>The Bataillon is fun</value>
+  <data name="Playerlist" xml:space="preserve">
+    <value>Liste des joueurs</value>
+    <comment/>
+  </data>
+  <data name="Teamlist" xml:space="preserve">
+    <value>Liste des équipes</value>
+    <comment/>
+  </data>
+  <data name="Gamelist" xml:space="preserve">
+    <value>Liste des parties</value>
     <comment/>
   </data>
 </root>

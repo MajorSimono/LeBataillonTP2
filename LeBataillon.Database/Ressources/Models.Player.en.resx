@@ -117,12 +117,56 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Welcome" xml:space="preserve">
-    <value>Welcome on the Battailon Website</value>
+  <data name="Surnom du joueur" xml:space="preserve">
+    <value>Nickname of the player</value>
     <comment/>
   </data>
-  <data name="WelcomeMessage" xml:space="preserve">
-    <value>The Bataillon is fun</value>
+  <data name="Email du joueur" xml:space="preserve">
+    <value>Email of the player</value>
+    <comment/>
+  </data>
+  <data name="Email requis" xml:space="preserve">
+    <value>Email required</value>
+    <comment/>
+  </data>
+  <data name="Maximum de 50 caractères pour le champ {0}." xml:space="preserve">
+    <value>Maximum of 50 characters for the field {0}.</value>
+    <comment/>
+  </data>
+  <data name="Téléphone du joueur" xml:space="preserve">
+    <value>Phone number of the player</value>
+    <comment/>
+  </data>
+  <data name="Il faut que le téléphone soit de la forme ###-###-####" xml:space="preserve">
+    <value>The format of the Phone number needs to be ###-###-####</value>
+    <comment/>
+  </data>
+  <data name="Prénom du joueur" xml:space="preserve">
+    <value>First name of the player</value>
+    <comment/>
+  </data>
+  <data name="Prénom requis" xml:space="preserve">
+    <value>First name required</value>
+    <comment/>
+  </data>
+  <data name="Nom du joueur" xml:space="preserve">
+    <value>Last name of the player</value>
+    <comment/>
+  </data>
+  <data name="Nom requis" xml:space="preserve">
+    <value>Last name required</value>
+    <comment/>
+  </data>
+  <data name="Niveau du joueur" xml:space="preserve">
+    <value>Level of the player</value>
+    <comment/>
+  </data>
+  <data name="L'équipe du joueur" xml:space="preserve">
+    <value>Team of the player</value>
+    <comment/>
+  </data>
+  <data name="Description du joueur" xml:space="preserve">
+    <value>Description of the player</value>
     <comment/>
   </data>
 </root>

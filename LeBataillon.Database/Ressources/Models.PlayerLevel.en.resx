@@ -117,12 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Welcome" xml:space="preserve">
-    <value>Welcome on the Battailon Website</value>
+  <data name="Débutant" xml:space="preserve">
+    <value>Beginner</value>
     <comment/>
   </data>
-  <data name="WelcomeMessage" xml:space="preserve">
-    <value>The Bataillon is fun</value>
+  <data name="Intermédiaire" xml:space="preserve">
+    <value>Intermediate</value>
+    <comment/>
+  </data>
+  <data name="Avancé" xml:space="preserve">
+    <value>Advanced</value>
     <comment/>
   </data>
 </root>

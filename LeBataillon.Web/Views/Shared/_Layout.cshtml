@@ -25,12 +25,20 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2020 - LeBataillon.Web - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <div class="row">
+                <div class="col-md-6">
+                &copy; 2020 - @SharedLocals["LeBataillon"] - <a asp-area="" asp-controller="Home" asp-action="Privacy">@SharedLocals["Privacy"]</a>
+                </div> 
+                <div class="col-md-6 text-right">
+                  @await Html.PartialAsync("_SelectLanguage")
+                </div>              
+            </div>     
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/select-language.js" asp-append-version="true"></script>
     <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 
     <script type="text/javascript"
@@ -39,7 +47,8 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <script src="https://kit.fontawesome.com/ff6344fc98.js"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+    
+    @RenderSection("Scripts", required: false)
 </body>
 
 </html>

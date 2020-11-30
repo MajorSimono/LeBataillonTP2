@@ -5,10 +5,10 @@
     TempData["message"] = TempData["message"];
 }
 
-<h1>Index</h1>
+<h1>@SharedLocals["TitlePlayer"]</h1>
 
 <p>
-    <a class="btn btn-primary" asp-action="Create"><i class="fas fa-plus-circle"></i>Create New </a>
+    <a class="btn btn-primary" asp-action="Create"><i class="fas fa-plus-circle"></i>@SharedLocals["CreatePlayer"]</a>
 </p>
 <table id="tblData" class="table">
     <thead>

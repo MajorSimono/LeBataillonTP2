@@ -117,12 +117,80 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Welcome" xml:space="preserve">
-    <value>Welcome on the Battailon Website</value>
+  <data name="LeBataillon" xml:space="preserve">
+    <value>Le Bataillon</value>
     <comment/>
   </data>
-  <data name="WelcomeMessage" xml:space="preserve">
-    <value>The Bataillon is fun</value>
+  <data name="Privacy" xml:space="preserve">
+    <value>Vie privée</value>
+    <comment/>
+  </data>
+  <data name="CreatePlayer" xml:space="preserve">
+    <value>Créer un joueur</value>
+    <comment/>
+  </data>
+  <data name="CreateTeam" xml:space="preserve">
+    <value>Créer une équipe</value>
+    <comment/>
+  </data>
+  <data name="CreateGame" xml:space="preserve">
+    <value>Créer une partie</value>
+    <comment/>
+  </data>
+  <data name="TitleBestPlayer" xml:space="preserve">
+    <value>Les 3 meilleurs joueurs</value>
+    <comment/>
+  </data>
+  <data name="Backtolist" xml:space="preserve">
+    <value>Retour à la liste</value>
+    <comment/>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Création</value>
+    <comment/>
+  </data>
+  <data name="Game" xml:space="preserve">
+    <value>Partie</value>
+    <comment/>
+  </data>
+  <data name="Player" xml:space="preserve">
+    <value>Joueur</value>
+    <comment/>
+  </data>
+  <data name="Team" xml:space="preserve">
+    <value>Équipe</value>
+    <comment/>
+  </data>
+  <data name="TitlePlayer" xml:space="preserve">
+    <value>Liste des joueurs</value>
+    <comment/>
+  </data>
+  <data name="TitleGame" xml:space="preserve">
+    <value>Liste des parties</value>
+    <comment/>
+  </data>
+  <data name="TitleTeam" xml:space="preserve">
+    <value>Liste des équipes</value>
+    <comment/>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Supprimer</value>
+    <comment/>
+  </data>
+  <data name="ConfirmText" xml:space="preserve">
+    <value>Êtes-vous certain de vouloir supprimer ceci?</value>
+    <comment/>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Modifier</value>
+    <comment/>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Sauvegarder</value>
+    <comment/>
+  </data>
+  <data name="Detail" xml:space="preserve">
+    <value>Détail</value>
     <comment/>
   </data>
 </root>

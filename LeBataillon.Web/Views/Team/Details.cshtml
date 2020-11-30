@@ -1,13 +1,13 @@
 @model LeBataillon.Database.Models.Team
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = @SharedLocals["Edit"];
 }
 
-<h1>Details</h1>
+<h1>@SharedLocals["Detail"]</h1>
 
 <div>
-    <h4>Team</h4>
+    <h4>@SharedLocals["Team"]</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
@@ -31,6 +31,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">@SharedLocals["Edit"]</a>
+    <a asp-action="Index" class="btn btn-primary">@SharedLocals["Backtolist"]</a>
 </div>

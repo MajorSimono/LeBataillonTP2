@@ -53,7 +53,7 @@ namespace LeBataillon.Database.Models
         [InverseProperty("Team")]
         public List<Player> Players = new List<Player>();
 
-        [Display(Name = "nombre de Joueurs Maximum")]
+        [Display(Name = "Nombre de Joueurs Maximum")]
         [Required(ErrorMessage = "Nombre de joueurs maximum de l'équipe requis")]
         [Range(6, 10, ErrorMessage = "Minimum de joueurs est de 6 et maximum de joueurs est 10")]
         public int JoueurMaximum { get; set; }

@@ -117,12 +117,80 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Welcome" xml:space="preserve">
-    <value>Welcome on the Battailon Website</value>
+  <data name="LeBataillon" xml:space="preserve">
+    <value>The Battalion</value>
     <comment/>
   </data>
-  <data name="WelcomeMessage" xml:space="preserve">
-    <value>The Bataillon is fun</value>
+  <data name="Privacy" xml:space="preserve">
+    <value>Privacy</value>
+    <comment/>
+  </data>
+  <data name="CreatePlayer" xml:space="preserve">
+    <value>Create a new Player</value>
+    <comment/>
+  </data>
+  <data name="CreateTeam" xml:space="preserve">
+    <value>Create a new Team</value>
+    <comment/>
+  </data>
+  <data name="CreateGame" xml:space="preserve">
+    <value>Create a new Game</value>
+    <comment/>
+  </data>
+  <data name="TitleBestPlayer" xml:space="preserve">
+    <value>The 3 best players</value>
+    <comment/>
+  </data>
+  <data name="Backtolist" xml:space="preserve">
+    <value>Back to List</value>
+    <comment/>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Create</value>
+    <comment/>
+  </data>
+  <data name="Game" xml:space="preserve">
+    <value>Game</value>
+    <comment/>
+  </data>
+  <data name="Player" xml:space="preserve">
+    <value>Player</value>
+    <comment/>
+  </data>
+  <data name="Team" xml:space="preserve">
+    <value>Team</value>
+    <comment/>
+  </data>
+  <data name="TitlePlayer" xml:space="preserve">
+    <value>List of Players</value>
+    <comment/>
+  </data>
+  <data name="TitleGame" xml:space="preserve">
+    <value>List of Games</value>
+    <comment/>
+  </data>
+  <data name="TitleTeam" xml:space="preserve">
+    <value>List of Teams</value>
+    <comment/>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+    <comment/>
+  </data>
+  <data name="ConfirmText" xml:space="preserve">
+    <value>Are you sure you want to delete this?</value>
+    <comment/>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+    <comment/>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+    <comment/>
+  </data>
+  <data name="Detail" xml:space="preserve">
+    <value>Detail</value>
     <comment/>
   </data>
 </root>
