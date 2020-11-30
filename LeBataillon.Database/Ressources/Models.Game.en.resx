@@ -133,4 +133,8 @@
     <value>Attacking team of the game</value>
     <comment/>
   </data>
+  <data name="Statut de la partie" xml:space="preserve">
+    <value>Status of the game</value>
+    <comment/>
+  </data>
 </root>

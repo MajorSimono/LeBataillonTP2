@@ -47,7 +47,7 @@ namespace LeBataillon.Database.Models
 
         public virtual Team TeamAttacker { get; set; }
 
-        [Display(Name = "Status de la partie")]
+        [Display(Name = "Statut de la partie")]
         [Required(ErrorMessage = "Ce champ est requis")]
         public GameStatus status { get; set; }
     }
