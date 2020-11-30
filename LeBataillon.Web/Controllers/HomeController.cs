@@ -49,15 +49,17 @@ namespace LeBataillon.Web.Controllers
 
 
         [HttpPost]
-        public IActionResult SetLanguage(string culture, string returnUrl)
-        {
-            var cookie = CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture));
-            var name = CookieRequestCultureProvider.DefaultCookieName;
-            Response.Cookies.Append(name,cookie, new CookieOptions {
-                                                                    Path = "/",
-                                                                    Expires = DateTimeOffset.UtcNow.AddYears(1),
-                                                                    } );
-            return LocalRedirect(returnUrl);
-        }
+        public IActionResult SetLanguage(string culture, string returnUrl)
+        {
+
+            var cookie = CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture));
+            var name = CookieRequestCultureProvider.DefaultCookieName;
+            Response.Cookies.Append(name, cookie, new CookieOptions
+            {
+                Path = "/",
+                Expires = DateTimeOffset.UtcNow.AddYears(1),
+            });
+            return LocalRedirect(returnUrl);
+        }
     }
 }

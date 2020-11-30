@@ -2,7 +2,7 @@
 
 @{
     ViewData["Title"] = "Index";
-    TempData["message"] = TempData["message"];
+
 }
 
 <h1>@SharedLocals["TitlePlayer"]</h1>
@@ -76,12 +76,20 @@
 </table>
 
 @section Scripts{
-  <script src="~/js/Player.js"></script>
+
+    
+
+<script src="~/js/Player.js"></script>
+
+
+          
+ 
+ 
 
 
    <script>
-      $    $(document).ready(function () { 
-       if('@TempData["message"]' == "added"){
+      $(document).ready(function () { 
+       if($(TempData["message"]) == "added"){
           Command: toastr["success"]("Create Reussi")
 
 toastr.options = {
@@ -101,7 +109,7 @@ toastr.options = {
   "showMethod": "fadeIn",
   "hideMethod": "fadeOut"
        }
-       else if('@TempData["message"]' == "edit")
+       else if($(TempData["message"]) == "edit")
        { 
        Command: toastr["success"]("edit Reussi")
 
@@ -122,8 +130,9 @@ toastr.options = {
   "showMethod": "fadeIn",
   "hideMethod": "fadeOut"       }
        else{}
+    }
     });
 
-      })
+      }})
   </script>
   }
